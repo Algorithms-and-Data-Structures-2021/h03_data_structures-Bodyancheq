@@ -17,12 +17,20 @@ void LinkedQueue::Dequeue() {
 
   auto temp = front_->next;
   delete front_;
-  front_ =
+  front_ = temp;
   size_ -= 1;
 }
 
 void LinkedQueue::Clear() {
-  // TODO: напишите здесь свой код ...
+  auto curr = front_;
+  for (int i = 0; i < size_; ++i) {
+    auto temp = curr->next;
+    delete curr;
+    curr = temp;
+  }
+  size_ = 0;
+  front_ = nullptr;
+  back_ = nullptr;
 }
 
 // === РЕАЛИЗОВАНО ===
