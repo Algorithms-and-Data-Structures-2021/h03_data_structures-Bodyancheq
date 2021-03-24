@@ -41,7 +41,7 @@ void ArrayStack::Pop() {
 }
 
 void ArrayStack::Clear() {
-  delete[] data_;
+  delete[] data_; // ELEMENT UNDEFINED
   size_ = 0;
 }
 
