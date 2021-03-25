@@ -13,8 +13,8 @@ void LinkedQueue::Enqueue(Element e) {
   else {
     back_->next = temp;
     back_ = temp;
-    size_ += 1;
   }
+  size_ += 1;
 }
 
 void LinkedQueue::Dequeue() {
